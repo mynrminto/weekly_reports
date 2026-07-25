@@ -2,11 +2,41 @@
 
 これは毎週月曜の自動実行(Routine)が新しいセッションに渡す**正典手順**です。
 実行セッションはこのファイルの指示に従い、PubMed の新着から小児腎臓病トピックを選び、
-ラジオ台本・音声(MP3)・論文要約・インフォグラフィックを生成し、main へコミット(raw 配信)、
+ラジオ台本・音声(MP3)・論文要約・インフォグラフィックを生成し、GitHub へコミット(raw 配信)、
 Notion 掲載（音源を再生できる形で埋め込み）まで行います。
 
+---
+
+## ▼ ここだけ編集してください（設定欄）
+
+番組の内容を変えたいときは、**この欄だけ**を書き換えて push すれば次回実行から反映されます
+（Routine のプロンプトを貼り直す必要はありません）。
+
+```yaml
+# 番組名
+show_name: "週刊・小児腎臓病ラジオ"
+
+# PubMed 検索クエリ（専門領域を変えるならここ）
+pubmed_query: >-
+  (pediatric OR paediatric OR children OR childhood)
+  AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)
+
+# 1回あたりに取り上げる論文数
+topic_count: 3
+
+# 2話者の設定（name は台本の話者ラベルと完全一致させる。voice は Gemini の音声名）
+hosts:
+  - { role: "進行役", name: "ナオ",     voice: "Puck" }   # 聞き手・リスナー代弁
+  - { role: "解説役", name: "マキ先生", voice: "Kore" }   # 小児腎臓病が専門
+```
+
+> 話者は **最大2名**（Gemini マルチスピーカーの上限）。以降の手順に出てくる
+> 「ナオ」「マキ先生」「3本」などの記述は、すべてこの設定欄の値を正とします。
+
+---
+
 ## 前提
-- リポジトリ: `mynrminto/weekly_reports`、ブランチ **`main`**（週次成果物は main にコミットし raw URL で配信）
+- リポジトリ: `mynrminto/weekly_reports`（push 先ブランチは手順6で自動的に決まる）
 - 利用コネクタ(MCP): PubMed / Notion（Google Drive は任意のバックアップ）
 - 環境変数 `GEMINI_API_KEY`（未設定なら音声はスキップし、その旨を成果物と通知に明記）
 - Notion 掲載先データベース(data_source_id): **`1a961a49-2238-4dcb-87fc-53c23ffcb5d7`**
