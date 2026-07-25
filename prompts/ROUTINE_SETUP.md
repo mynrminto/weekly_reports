@@ -7,20 +7,28 @@
 
 ## 登録手順
 
-1. **claude.ai** を開く → 左メニューの **Routines**（定期実行）→ **新規作成**
+1. **[claude.ai/code/routines](https://claude.ai/code/routines)** を開き、**New routine** をクリック
 2. 各項目を次のように設定:
 
    | 項目 | 設定値 |
    |---|---|
    | 名前 | `週刊・小児腎臓病ラジオ（毎週月曜 07:00 JST）` |
-   | スケジュール | **毎週月曜 07:00**（タイムゾーンは日本時間） |
-   | 環境 | このプロジェクトの環境（`weekly_reports` がクローンされる環境） |
-   | 実行方式 | 毎回新しいセッションを作成 |
-   | **コネクタ** | **PubMed** と **Notion** を選択（Google Drive は任意） |
-   | 通知 | メール通知を ON（mynrminto@gmail.com） |
+   | Instructions | 下の「貼り付け用プロンプト」をそのままコピー |
+   | リポジトリ | `mynrminto/weekly_reports` |
+   | 環境 | このプロジェクトの環境（`GEMINI_API_KEY` が設定済みのもの） |
+   | Select a trigger | **Schedule** → Weekly / 月曜 / 07:00（ローカル時刻で入力すれば自動変換） |
+   | **Connectors** タブ | **PubMed** と **Notion** が含まれていること（不要なものは外す） |
+   | **Permissions** タブ | **Allow unrestricted branch pushes** を**有効化**（下記参照） |
 
-3. **プロンプト欄**に、下の「貼り付け用プロンプト」をそのままコピーして貼り付け
-4. 保存
+3. **Create** をクリック
+4. 詳細ページの **Run now** で 1 回テスト実行
+
+> ### ⚠️ Allow unrestricted branch pushes は必須
+>
+> Routine は既定では **`claude/` で始まるブランチにしか push できません**。
+> 本パイプラインは週次成果物を **`main`** にコミットして raw URL で配信する設計のため、
+> この許可がないと毎週 push の段階で失敗します。
+> Routine 編集画面の **Permissions** タブで、対象リポジトリについて有効化してください。
 
 ## 事前確認（1回だけ）
 
