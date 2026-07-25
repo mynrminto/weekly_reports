@@ -1,0 +1,62 @@
+{
+  "issue_date": "2026-07-25",
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)",
+    "datetype": "edat",
+    "date_from": "2026-07-18",
+    "date_to": "2026-07-25",
+    "new_hits_broad": 166
+  },
+  "selected": [
+    {
+      "pmid": "42485434",
+      "title": "SGLT2 inhibition modulates metabolic, vascular, and inflammatory molecular markers in the kidney in youth with type 1 diabetes",
+      "journal": "Science Translational Medicine",
+      "date": "2026-07-22",
+      "type": "Randomized Controlled Trial",
+      "doi": "10.1126/scitranslmed.aee1005",
+      "url": "https://doi.org/10.1126/scitranslmed.aee1005",
+      "one_line": "1型糖尿病の若者を対象にダパグリフロジンの腎保護メカニズムを腎生検・単一細胞RNA解析で示したRCT（ATTEMPT試験）。"
+    },
+    {
+      "pmid": "42493645",
+      "title": "Pediatric sepsis-associated acute kidney injury: leveraging pathophysiology for risk stratification and identification of treatable traits",
+      "journal": "Pediatric Nephrology",
+      "date": "2026-07-24",
+      "type": "Review",
+      "doi": "10.1007/s00467-026-07487-0",
+      "url": "https://doi.org/10.1007/s00467-026-07487-0",
+      "one_line": "小児の敗血症関連AKIを均一疾患でなく多様な病態の集合と捉え、精密医療的なリスク層別化と治療可能な特性の同定を提唱するレビュー。"
+    },
+    {
+      "pmid": "42498068",
+      "title": "Don't Go With The Flow: New Perspectives On Fetal Intervention For Lower Urinary Tract Obstruction",
+      "journal": "Journal of Pediatric Surgery",
+      "date": "2026-07-24",
+      "type": "Review",
+      "doi": "10.1016/j.jpedsurg.2026.163322",
+      "url": "https://doi.org/10.1016/j.jpedsurg.2026.163322",
+      "one_line": "下部尿路閉塞（LUTO）への胎児介入の課題（診断精度・適応基準・アウトカム報告）と、低侵襲シャントや新技術による今後を展望。"
+    },
+    {
+      "pmid": "42474167",
+      "title": "Pharmacological strategies for slowing the rise of creatinine and urea nitrogen in diabetic kidney disease: A scoping review",
+      "journal": "Pakistan Journal of Pharmaceutical Sciences",
+      "date": "2026-07",
+      "type": "Scoping Review",
+      "doi": "10.36721/PJPS.2026.39.10.288.1",
+      "url": "https://doi.org/10.36721/PJPS.2026.39.10.288.1",
+      "one_line": "思春期（10〜19歳）の糖尿病性腎臓病に対する薬物戦略をPRISMA-ScRで整理。RAS阻害・SGLT2阻害・GLP-1受容体作動薬などを扱うが小児特異的エビデンスの不足を指摘。"
+    },
+    {
+      "pmid": "42483538",
+      "title": "IgA nephropathy: an overview of the disease, its pathophysiology, and involvement of the gut-kidney axis",
+      "journal": "Kidney International Supplements",
+      "date": "2026-07-20",
+      "type": "Review",
+      "doi": "10.1016/j.kisu.2026.01.003",
+      "url": "https://doi.org/10.1016/j.kisu.2026.01.003",
+      "one_line": "世界で最も多い原発性糸球体疾患IgA腎症の疫学・臨床像と、腸-腎軸を軸にした4ヒット病態モデルを概説。小児にも関わる進行性腎疾患。"
+    }
+  ]
+}
