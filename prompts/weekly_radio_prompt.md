@@ -2,12 +2,12 @@
 
 これは毎週月曜の自動実行(Routine)が新しいセッションに渡す**正典手順**です。
 実行セッションはこのファイルの指示に従い、PubMed の新着から小児腎臓病トピックを選び、
-ラジオ台本・音声(MP3)・論文要約・インフォグラフィックを生成し、Notion 掲載と
-Google Drive 保存、リポジトリへのコミットまで行います。
+ラジオ台本・音声(MP3)・論文要約・インフォグラフィックを生成し、main へコミット(raw 配信)、
+Notion 掲載（音源を再生できる形で埋め込み）まで行います。
 
 ## 前提
-- リポジトリ: `mynrminto/weekly_reports`、ブランチ `claude/pediatric-kidney-disease-radio-k11ma7`
-- 利用コネクタ(MCP): PubMed / Google Drive / Notion
+- リポジトリ: `mynrminto/weekly_reports`、ブランチ **`main`**（週次成果物は main にコミットし raw URL で配信）
+- 利用コネクタ(MCP): PubMed / Notion（Google Drive は任意のバックアップ）
 - 環境変数 `GEMINI_API_KEY`（未設定なら音声はスキップし、その旨を成果物と通知に明記）
 - Notion 掲載先データベース(data_source_id): **`1a961a49-2238-4dcb-87fc-53c23ffcb5d7`**
   （「週刊・小児腎臓病ラジオ（各号）」DB。ハブページ: https://app.notion.com/p/3a84bd470a818169afbcefb2f3b7f11b ）
@@ -15,7 +15,7 @@ Google Drive 保存、リポジトリへのコミットまで行います。
 ## 手順
 
 ### 0. 準備
-- `git fetch origin <branch> && git checkout <branch> && git pull` で最新化。
+- `git fetch origin main && git checkout main && git pull` で最新化。
 - `pip install -r scripts/requirements.txt`。
 - 当日(JST)の日付を `DATE`（YYYY-MM-DD）とし、`reports/<DATE>/` を作業ディレクトリにする。
 
@@ -63,28 +63,36 @@ Google Drive 保存、リポジトリへのコミットまで行います。
   配色・可読性は `dataviz` スキルの指針に沿う。ダーク背景・幅約 1120–1200px を推奨。
 - `python scripts/render_infographic.py reports/<DATE>/infographic.html reports/<DATE>/infographic.png`
 
-### 6. Google Drive 保存
-- `mcp__Google_Drive__create_file` で `radio.mp3`（あれば）と `infographic.png` を
-  `pediatric-kidney-radio/<DATE>/` 相当の名前でアップロード。
-- 閲覧可能な共有リンクを取得し `reports/<DATE>/links.txt` に記録。
+### 6. 成果物を main にコミット & プッシュ（raw 配信のため先に実施）
+- `reports/<DATE>/` 一式（script.md, script.txt, articles.json, infographic.html, **infographic.png, radio.mp3**）をコミット。
+  ※ Notion へは raw URL 経由で取り込むため、**PNG と(あれば)MP3 も必ずコミット**する。
+- `git push -u origin main`（失敗時は指数バックオフで最大 4 回）。
+- 配信 raw URL の形（以降で使用）:
+  - `https://raw.githubusercontent.com/mynrminto/weekly_reports/main/reports/<DATE>/radio.mp3`
+  - `https://raw.githubusercontent.com/mynrminto/weekly_reports/main/reports/<DATE>/infographic.png`
 
-### 7. Notion 掲載
-- `mcp__Notion__notion-create-attachment` に `infographic.html` を **inline content** で渡し、
-  返る `markdown_source`（`file-upload://…`）を取得。
-- `mcp__Notion__notion-create-pages`（parent = `data_source_id: 1a961a49-2238-4dcb-87fc-53c23ffcb5d7`）で当週ページを作成:
-  - properties: 週(タイトル=「YYYY-MM-DD 週」)、公開日、トピック数、PMIDs、MP3(URL)、インフォグラフィックPNG(URL)
-  - content（Notion-flavored Markdown）: 冒頭に `<embed src="file-upload://…">` でインフォグラフィックを埋め込み、
-    続いて各論文の要約（見出し=タイトル、誌名・日付・PMID/DOI リンク・3〜5 行要約）、末尾に MP3 リンク。
+### 7. Notion 掲載（音源を再生できる形で埋め込む）
+- 添付を作成（**source_url に上記 raw URL** を渡す。`notion-create-attachment`）:
+  - MP3 → 返る `file-upload://…` を音声ブロック `<audio src="file-upload://…">…</audio>` に使う（インライン再生可）。
+  - PNG → 返る `file-upload://…` を画像 `![caption](file-upload://…)` に使う。
+  - ※ 添付は取得から1時間以内にページへ配置すること。MP3 は無料WSで 5MiB 未満に収める（TTS の qscale で調整可）。
+- 当週ページは **update-or-create**（重複防止）:
+  - まず `notion-search`(data_source_url = `collection://1a961a49-2238-4dcb-87fc-53c23ffcb5d7`) で「<DATE> 号」を検索。
+  - 有れば `notion-update-page`（`replace_content` で本文差し替え＋`update_properties`）、無ければ
+    `notion-create-pages`（parent = `data_source_id: 1a961a49-2238-4dcb-87fc-53c23ffcb5d7`）。
+  - properties: 週(タイトル=「YYYY-MM-DD 号」)、公開日、トピック数=3、PMIDs、MP3(URL=raw)、インフォグラフィックPNG(URL=raw)。
+  - content（Notion-flavored Markdown）: 冒頭 callout（出典・2話者・Take Home の案内）→ `## 🔊 今週の音声` に
+    `<audio>` → `## 🖼️ インフォグラフィック` に画像 → `## 今週のトピック（3本）` に各論文（見出し=タイトル、
+    誌名・日付・種別・PMID・DOI リンク＋詳しい要約＋`<callout icon="🎯">` に Take Home 3点）。
   - 実装時に NFM 仕様 `notion://docs/enhanced-markdown-spec` を参照（推測で書かない）。
 
-### 8. コミット & プッシュ
-- `reports/<DATE>/`（script.md, script.txt, articles.json, infographic.html, links.txt）をコミット。
-  ※ MP3/PNG は Drive 保存が主。リポジトリを軽量に保つためコミットは任意（数 MB 未満なら可）。
-- `git push -u origin <branch>`（失敗時は指数バックオフで最大 4 回）。
+### 8. （任意）Google Drive バックアップ
+- 必要に応じて `mcp__Google_Drive__create_file` で `radio.mp3` / `infographic.png` を保管し、
+  共有リンクを `reports/<DATE>/links.txt` に記録（主たる配信は上記 raw URL + Notion 埋め込み）。
 
 ### 9. 最終メッセージ（= 完了通知メール本文になる）
 次を簡潔にまとめて出力:
 - 今週紹介した 3 本の見出し（各トピックの Take Home も一言）
 - Notion ページ URL
-- MP3 の Drive リンク（未生成ならその旨）
+- 音声（MP3）の raw リンク（未生成ならその旨）
 - 補足（キー未設定などの注意があれば）
