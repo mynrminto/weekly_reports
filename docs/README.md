@@ -58,7 +58,7 @@ PubMed で直近7日の新着を検索、数本を選定        ← コネクタ
     ↓
 Gemini TTS で MP3 化、インフォグラフィックを PNG 化  ← 環境変数の API キー
     ↓
-GitHub の main にコミット & push
+GitHub にコミット & push
     ↓
 raw URL 経由で Notion に添付し、ページを作成      ← コネクタ経由
     ↓
@@ -100,6 +100,10 @@ Routine に貼り付けるプロンプトには、番組の中身を書いてい
 Notion に音声を埋め込むには、まず GitHub に push して
 `raw.githubusercontent.com/...` の URL を得て、それを Notion の添付作成に渡します。
 そのため **リポジトリは Public である必要があります**（Private だと Notion 側から取得できない）。
+
+この raw URL は**ブランチ名ではなくコミット SHA** で組み立てています。Routine は既定で
+`claude/` 接頭辞のブランチにしか push できず、push 先が `main` になるとは限らないためです。
+SHA なら push 先がどちらでも同じ手順で配信でき、URL も後から変わりません。
 
 ---
 
@@ -168,11 +172,14 @@ Notion に音声を埋め込むには、まず GitHub に push して
 
 5. **スケジュール**: **Select a trigger** → **Schedule** → Weekly / 曜日 / 時刻
    （ローカル時間で入力すれば自動変換されます）
-6. **Connectors** タブ: PubMed と Notion が含まれていることを確認
-7. **Permissions** タブ: **Allow unrestricted branch pushes** を有効化
+6. **コネクター** タブ: **PubMed** と **Notion** が含まれていることを確認し、
+   使わないコネクタは外す（実行中は許可なく全ツールが使われるため）
 
-> **手順7を忘れると必ず失敗します。** Routine は既定では `claude/` で始まるブランチにしか
-> push できません。このパイプラインは `main` に push するため、この許可が必要です。
+> **ブランチについて（設定は不要です）。** Routine は既定では `claude/` で始まるブランチにしか
+> push できません。公式ドキュメントにはこれを解除する設定が記載されていますが、
+> **現行の UI には該当項目がありません**（「動作」タブにあるのはプルリクエストの自動修正のみ）。
+> そのため手順書側で、`main` を試し拒否されたら `claude/weekly` にフォールバックし、
+> raw URL は**コミット SHA** で組み立てる設計にしてあります。
 
 ### 手順6. テスト実行する
 
@@ -228,7 +235,7 @@ prompts/weekly_radio_prompt.md の設定欄を、私の専門領域である〇�
 
 | 症状 | 原因と対処 |
 |---|---|
-| push が拒否される | **Allow unrestricted branch pushes** が無効。Routine 編集 → Permissions |
+| push が `claude/` 以外で拒否される | 仕様どおりです。手順書が `claude/weekly` に自動フォールバックします |
 | 音声ができない | `GEMINI_API_KEY` の設定漏れ、または値を引用符で囲んでいる |
 | Notion にページができない | Notion 連携時にページを選んでいない。再認可する |
 | Notion で音声が再生できない | リポジトリが Private |

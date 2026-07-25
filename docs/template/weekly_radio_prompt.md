@@ -42,11 +42,10 @@ hosts:
 
 ## 前提
 
-- リポジトリ: **このセッションがクローンしたリポジトリ**、ブランチ **`main`**
+- リポジトリ: **このセッションがクローンしたリポジトリ**
   - オーナー名/リポジトリ名は `git remote get-url origin` から取得し、raw URL を組み立てる
     （手順書にハードコードしない）
-  - main へ push するため、Routine の **Permissions → Allow unrestricted branch pushes** が
-    有効になっている必要がある
+  - push 先ブランチは手順6で自動的に決まる（追加の権限設定は不要）
 - 利用コネクタ(MCP): **PubMed**（検索）/ **Notion**（掲載）
 - 環境変数 `GEMINI_API_KEY`（未設定なら音声はスキップし、その旨を成果物と通知に明記）
 
@@ -105,18 +104,21 @@ python scripts/tts_gemini.py reports/<DATE>/script.txt reports/<DATE>/radio.mp3 
   配色・可読性は `dataviz` スキルの指針に沿う。ダーク背景・幅約 1120–1200px を推奨。
 - `python scripts/render_infographic.py reports/<DATE>/infographic.html reports/<DATE>/infographic.png`
 
-### 6. 成果物を main にコミット & プッシュ（raw 配信のため先に実施）
+### 6. 成果物をコミット & プッシュ（raw 配信のため先に実施）
 - `reports/<DATE>/` 一式（script.md, script.txt, articles.json, infographic.html,
   **infographic.png, radio.mp3**）をコミット。
   ※ Notion へは raw URL 経由で取り込むため、**PNG と(あれば)MP3 も必ずコミット**する。
-- `git push -u origin main`（失敗時は指数バックオフで最大4回）。
-- 配信 raw URL の形（`OWNER/REPO` は手順0で取得したもの）:
-  - `https://raw.githubusercontent.com/OWNER/REPO/main/reports/<DATE>/radio.mp3`
-  - `https://raw.githubusercontent.com/OWNER/REPO/main/reports/<DATE>/infographic.png`
-
-> push が `claude/` 以外のブランチで拒否された場合は、**Allow unrestricted branch pushes** が
-> 未設定です。その場合は `claude/weekly-<DATE>` ブランチに push し、raw URL のブランチ名も
-> それに合わせたうえで、最終メッセージにこの設定が必要な旨を明記する。
+- **push 先はブランチ制限の有無で自動的に決める**:
+  1. まず `git push -u origin main` を試す（ネットワーク起因の失敗は指数バックオフで最大4回）。
+  2. **ブランチ制限で拒否された場合**（Routine は既定で `claude/` 接頭辞のブランチにしか
+     push できない）は、`git checkout -B claude/weekly && git push -u origin claude/weekly`
+     にフォールバックする。
+- push 後、**配信に使うコミット SHA** を `git rev-parse HEAD` で取得する。
+- 配信 raw URL は**ブランチ名ではなく SHA** で組み立てる（`OWNER/REPO` は手順0で取得したもの）。
+  ブランチ名に依存せず、URL も不変になる:
+  - `https://raw.githubusercontent.com/OWNER/REPO/<SHA>/reports/<DATE>/radio.mp3`
+  - `https://raw.githubusercontent.com/OWNER/REPO/<SHA>/reports/<DATE>/infographic.png`
+- どちらのブランチに push したかを、最終メッセージに記す。
 
 ### 7. Notion 掲載（初回はデータベースごと自動作成）
 
