@@ -18,6 +18,26 @@
 週次の詳細手順は [`prompts/weekly_radio_prompt.md`](prompts/weekly_radio_prompt.md) を参照。
 成果物は `reports/<YYYY-MM-DD>/` に保存されます。
 
+## 実行モード
+
+| モード | 実行者 | 外部アクセス | 追加設定 |
+|---|---|---|---|
+| **A. 半自動(コネクタ)** | あなたが開く対話セッション | Notion/Drive/PubMed **MCP コネクタ** | ほぼ不要(Gemini キーのみ) |
+| **B. 無人(トークン)** | 週次 Routine が起動する無人セッション | **公開 HTTP + env トークン** | ネットワーク許可 + Notion トークン |
+
+無人セッションは MCP コネクタを持てないため、モード B は外部アクセスを HTTP + トークンで行います
+（PubMed=E-utilities、Notion=REST、音声=Gemini、配信=GitHub raw）。手順は
+[`prompts/weekly_radio_auto.md`](prompts/weekly_radio_auto.md) を参照。
+
+### モード B の前提(環境設定)
+1. **ネットワーク許可**（環境設定 → Network access を Full access、または許可リストに追加）:
+   `eutils.ncbi.nlm.nih.gov` / `api.notion.com`
+   （`generativelanguage.googleapis.com` / `raw.githubusercontent.com` は既定で許可されていることが多い）
+2. **環境変数**: `GEMINI_API_KEY`（音声）、`NOTION_API_KEY`（Notion 内部インテグレーションのトークン）。
+   任意で `NOTION_PARENT_ID`、`NCBI_API_KEY`。
+3. **Notion 共有**: 内部インテグレーションを作成し、掲載先 DB に「接続」を追加して共有。
+4. 配信は Google Drive ではなく **公開リポジトリの raw URL**（PNG/MP3 をコミットして配信）。
+
 ## セットアップ
 
 ### 1. 依存関係
