@@ -38,20 +38,22 @@ python scripts/pubmed_fetch.py --date-to <DATE> --days 7 --max 30 \
 ```
 `candidates.json` の `candidates[]`（pmid/title/journal/pubdate/doi/authors/abstract/url）を読む。
 
-### 2. 選定(3〜5 本)
-- 臨床的インパクト・新規性・小児腎臓病との関連度で 3〜5 本を選ぶ（症例報告・関連薄は下げる）。
-- `reports/<DATE>/articles.json` に保存（`issue_date`, `search`, `selected[]`。各: pmid, title, journal, date, type, doi, url, one_line）。
+### 2. 選定(3 本)
+- 臨床的インパクト・新規性・小児腎臓病との関連度で **3 本**を選ぶ（深掘り重視、主題の重複を避ける／症例報告・関連薄は下げる）。
+- `reports/<DATE>/articles.json` に保存（`issue_date`, `search`, `selected[]`。各: pmid, title, journal, date, type, doi, url, one_line, **`take_home`（3点配列）**）。選外候補は `not_selected_this_week` に理由付きで残す。
 
 ### 3. 台本 `script.md` / 読み上げ用 `script.txt`
-- 日本語・会話調のラジオ番組風。オープニング→各トピック（何がわかったか→なぜ重要か→臨床的含意、PMID/DOI を口頭でも）→クロージング。
-- 5〜8 分相当（約 1,600〜2,600 字）。断定を避け原著参照を促す。
-- `script.txt` は Markdown 記号・URL を除いた素のテキスト（段落は空行区切り）。
+- **2話者の対話形式**。進行役 **ナオ**（聞き手）× 解説役 **マキ先生**（小児腎臓病専門）。
+- オープニング（2人の自己紹介＋今週は3本を深掘り）→各トピック（ナオの問いを挟み、背景→デザイン→結果→臨床的含意まで詳しく。PMID を口頭でも。**末尾にマキ先生が「今日の Take Home」を3点**明言）→クロージング（共通テーマ）。
+- 8〜10 分相当（約 3,000〜4,000 字）。断定を避け原著参照を促す。
+- `script.txt` は Markdown 記号・URL を除いた素のテキスト。**各発話を `ナオ: …` / `マキ先生: …` の話者ラベル付き**にし、発話ごとに空行で区切る。
 
-### 4. 音声 MP3
+### 4. 音声 MP3（2話者マルチスピーカー）
 ```bash
-python scripts/tts_gemini.py reports/<DATE>/script.txt reports/<DATE>/radio.mp3
+python scripts/tts_gemini.py reports/<DATE>/script.txt reports/<DATE>/radio.mp3 --speakers "ナオ=Puck,マキ先生=Kore"
 ```
-終了コード 2（`GEMINI_API_KEY` 未設定）なら音声はスキップし、以降 `mp3_url` は null。
+- `--speakers` の名前は `script.txt` の話者ラベルと**完全一致**させる（Gemini マルチスピーカーは最大2話者）。声は `GEMINI_TTS_SPEAKERS` でも指定可。
+- 終了コード 2（`GEMINI_API_KEY` 未設定）なら音声はスキップし、以降 `mp3_url` は null。
 
 ### 5. インフォグラフィック
 - `reports/<DATE>/infographic.html` を**自己完結 HTML**で作成（`dataviz` 指針、ダーク背景・幅約 1120–1200px）。
@@ -91,4 +93,4 @@ python scripts/render_infographic.py reports/<DATE>/infographic.html reports/<DA
 - `articles.json` / `script.md` / `script.txt` / `candidates.json` / `notion_payload.json` を push（PNG/MP3 は手順 6 で済み）。
 
 ### 9. 完了メッセージ(= 通知メール本文)
-- 紹介 3〜5 本の見出し / Notion ページ URL / MP3 の raw リンク(未生成ならその旨) / 注意点。
+- 紹介 3 本の見出し / Notion ページ URL / MP3 の raw リンク(未生成ならその旨) / 注意点。

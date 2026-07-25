@@ -90,16 +90,43 @@ def _split_sentences(block: str) -> list[str]:
     return out
 
 
-def synthesize_chunk(text: str, api_key: str, voice: str) -> bytes:
+def build_speech_config(voice: str, speakers: list[tuple[str, str]] | None) -> dict:
+    """Single- or multi-speaker speechConfig for the Gemini TTS request.
+
+    When `speakers` (a list of (name, voice) pairs, max 2) is given, a
+    multiSpeakerVoiceConfig is built so each labelled speaker in the script
+    gets its own voice. Otherwise a single prebuilt voice is used.
+    """
+    if speakers:
+        return {
+            "multiSpeakerVoiceConfig": {
+                "speakerVoiceConfigs": [
+                    {"speaker": name,
+                     "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": v}}}
+                    for name, v in speakers
+                ]
+            }
+        }
+    return {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}
+
+
+def synthesize_chunk(text: str, api_key: str, speech_config: dict,
+                     speakers: list[tuple[str, str]] | None) -> bytes:
     """Return raw PCM bytes for one chunk from the Gemini TTS API."""
     url = f"{API_ROOT}/models/{MODEL}:generateContent"
+    if speakers:
+        # A short instruction line frames the chunk as a conversation and is
+        # interpreted as a style directive (not read aloud). It also keeps each
+        # chunk self-describing when the script is split across requests.
+        names = "と".join(name for name, _ in speakers)
+        prompt = f"次の{names}による会話を、親しみやすいラジオ番組の口調で読み上げてください:\n{text}"
+    else:
+        prompt = text
     payload = {
-        "contents": [{"parts": [{"text": text}]}],
+        "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "responseModalities": ["AUDIO"],
-            "speechConfig": {
-                "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}
-            },
+            "speechConfig": speech_config,
         },
     }
     headers = {"x-goog-api-key": api_key, "Content-Type": "application/json"}
@@ -156,7 +183,23 @@ def main() -> None:
     ap.add_argument("script", help="path to the plain-text radio script")
     ap.add_argument("out", help="output .mp3 path")
     ap.add_argument("--voice", default=DEFAULT_VOICE, help=f"voice name (default {DEFAULT_VOICE})")
+    ap.add_argument(
+        "--speakers", default=os.environ.get("GEMINI_TTS_SPEAKERS"),
+        help="two-speaker mode: 'Name1=Voice1,Name2=Voice2'. The names must match "
+             "the 'Name:' labels used in the script. Falls back to single --voice "
+             "when omitted.")
     args = ap.parse_args()
+
+    speakers: list[tuple[str, str]] | None = None
+    if args.speakers:
+        speakers = []
+        for pair in args.speakers.split(","):
+            if "=" not in pair:
+                die(f"--speakers entry '{pair}' must be Name=Voice")
+            name, v = pair.split("=", 1)
+            speakers.append((name.strip(), v.strip()))
+        if not 1 <= len(speakers) <= 2:
+            die("--speakers supports 1 or 2 speakers (Gemini TTS limit)")
 
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -169,12 +212,18 @@ def main() -> None:
     if not text:
         die("script file is empty")
 
+    speech_config = build_speech_config(args.voice, speakers)
     chunks = chunk_script(text)
-    print(f"[tts_gemini] synthesising {len(chunks)} chunk(s) with {MODEL} / voice={args.voice}")
+    if speakers:
+        voices_desc = ", ".join(f"{n}={v}" for n, v in speakers)
+        print(f"[tts_gemini] synthesising {len(chunks)} chunk(s) with {MODEL} / "
+              f"multi-speaker ({voices_desc})")
+    else:
+        print(f"[tts_gemini] synthesising {len(chunks)} chunk(s) with {MODEL} / voice={args.voice}")
     pcm = bytearray()
     for i, chunk in enumerate(chunks, 1):
         print(f"[tts_gemini]  chunk {i}/{len(chunks)} ({len(chunk)} chars)")
-        pcm.extend(synthesize_chunk(chunk, api_key, args.voice))
+        pcm.extend(synthesize_chunk(chunk, api_key, speech_config, speakers))
         time.sleep(1)  # gentle pacing between requests
 
     wav_bytes = pcm_to_wav_bytes(bytes(pcm))
