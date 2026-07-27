@@ -158,7 +158,7 @@ python scripts/tts_gemini.py reports/<DATE>/script.txt reports/<DATE>/radio.mp3 
   `## 今週のトピック` に各論文（見出し=タイトル、誌名・日付・種別・PMID・DOI リンク
   ＋詳しい要約＋`<callout icon="🎯">` に Take Home 3点）。
 
-### 8. 最終メッセージ（= 完了通知メール本文になる）
+### 8. 最終メッセージ（= 完了通知の本文になる）
 次を簡潔にまとめて出力:
 - 今週紹介した論文の見出し（各 Take Home も一言）
 - Notion ページ URL（初回は作成した DB の URL も）

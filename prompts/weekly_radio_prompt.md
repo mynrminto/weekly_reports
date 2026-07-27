@@ -126,7 +126,7 @@ hosts:
 - 必要に応じて `mcp__Google_Drive__create_file` で `radio.mp3` / `infographic.png` を保管し、
   共有リンクを `reports/<DATE>/links.txt` に記録（主たる配信は上記 raw URL + Notion 埋め込み）。
 
-### 9. 最終メッセージ（= 完了通知メール本文になる）
+### 9. 最終メッセージ（= 完了通知の本文になる）
 次を簡潔にまとめて出力:
 - 今週紹介した 3 本の見出し（各トピックの Take Home も一言）
 - Notion ページ URL
