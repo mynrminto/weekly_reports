@@ -30,10 +30,14 @@ hosts:
 
 | 領域 | `pubmed_query` の例 |
 |---|---|
-| 循環器 | `(heart failure OR atrial fibrillation OR coronary) AND (cardiology OR cardiovascular)` |
-| 糖尿病 | `(diabetes mellitus OR insulin OR glycemic) AND (type 2 OR type 1)` |
-| 感染症 | `(antimicrobial resistance OR sepsis OR vaccine) AND (infectious disease)` |
-| 産婦人科 | `(pregnancy OR obstetric OR preeclampsia) AND (maternal outcome)` |
+| 新生児・NICU | `(neonate OR neonatal OR preterm OR very low birth weight) AND (intensive care OR outcome)` |
+| 小児循環器 | `(congenital heart disease OR Kawasaki disease) AND (children OR pediatric)` |
+| 小児神経 | `(children OR pediatric) AND (epilepsy OR seizure OR neurodevelopmental outcome)` |
+| 小児アレルギー | `(children OR pediatric) AND (asthma OR food allergy OR atopic dermatitis)` |
+| 小児感染症 | `(children OR infant) AND (RSV OR influenza OR vaccine OR sepsis)` |
+| 小児内分泌 | `(children OR adolescent) AND (type 1 diabetes OR growth hormone OR obesity)` |
+| 発達・こころ | `(children OR adolescent) AND (autism OR ADHD OR mental health)` |
+| 小児血液腫瘍 | `(childhood OR pediatric) AND (leukemia OR lymphoma OR solid tumor)` |
 
 > 話者名を変えたら、番組の性格に合う `voice` も選び直してください。
 > Gemini のマルチスピーカーは **最大2話者** です。

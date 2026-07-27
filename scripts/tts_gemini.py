@@ -34,6 +34,10 @@ SAMPLE_WIDTH = 2  # bytes (16-bit)
 
 MODEL = os.environ.get("GEMINI_TTS_MODEL", "gemini-2.5-flash-preview-tts")
 DEFAULT_VOICE = os.environ.get("GEMINI_TTS_VOICE", "Kore")
+# libmp3lame VBR quality: lower is better quality and a bigger file. A weekly
+# 8-10 minute episode has to stay under Notion's 5 MiB free-workspace limit,
+# so trade a little fidelity for headroom. Override with GEMINI_TTS_QSCALE.
+QSCALE = os.environ.get("GEMINI_TTS_QSCALE", "4")
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta"
 
 # Keep each synthesis request modest; the model has a per-request token budget
@@ -170,7 +174,7 @@ def wav_to_mp3(wav_bytes: bytes, out_path: str) -> None:
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
     proc = subprocess.run(
         [ffmpeg, "-hide_banner", "-loglevel", "error", "-y",
-         "-i", "pipe:0", "-codec:a", "libmp3lame", "-qscale:a", "3", out_path],
+         "-i", "pipe:0", "-codec:a", "libmp3lame", "-qscale:a", QSCALE, out_path],
         input=wav_bytes,
         capture_output=True,
     )
