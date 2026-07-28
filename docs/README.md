@@ -147,6 +147,11 @@ Notion に音声を埋め込むには、まず GitHub に push して
 > Notion の認可画面で、書き込みを許可するページを**必ず1つ以上**選んでください。
 > 選び忘れると、後で「掲載先データベースを作れない」というエラーになります。
 
+> **GitHub はコネクタではありません。** リポジトリへの clone / push は、手順2で繋いだ仕組み
+> （`/web-setup` または Claude GitHub App）が担当します。コネクタ一覧に GitHub を追加する
+> 必要はありません。実際、この記事の実行環境には GitHub コネクタは入っていませんが、
+> `main` への push は問題なく動いています。
+
 ### 手順4. Gemini API キーを取得する
 
 [aistudio.google.com/apikey](https://aistudio.google.com/apikey) でキーを作成してコピーします。
