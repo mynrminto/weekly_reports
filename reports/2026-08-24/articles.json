@@ -1,0 +1,71 @@
+{
+  "issue_date": "2026-08-24",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)",
+    "datetype": "edat",
+    "date_from": "2026-08-17",
+    "date_to": "2026-08-24",
+    "new_hits_broad": 163
+  },
+  "selected": [
+    {
+      "pmid": "42614610",
+      "title": "Kidney Transcriptome Sequencing Improves Molecular Diagnosis and Reveals Splicing Complexity Across the Alport Spectrum.",
+      "journal": "Kidney International Reports",
+      "date": "2026-07-21",
+      "type": "Cohort Study(分子診断)",
+      "doi": "10.1016/j.ekir.2026.106710",
+      "url": "https://doi.org/10.1016/j.ekir.2026.106710",
+      "one_line": "糸球体基底膜(GBM)異常を伴う93例の腎生検組織に全トランスクリプトームシーケンシングを実施し、アルポート症候群スペクトラムにおける分子診断能を検討。従来のDNA検査では捉えにくいスプライシング異常型変異を含む病的バリアントを52/93例(56%)で同定した。",
+      "take_home": [
+        "腎生検93例(90家系)のRNAシーケンシングで、病的/病的疑いバリアントが52例(56%)に同定され、うち14例(22%)はスプライシング異常型で、通常のDNA検査だけでは見逃されうるタイプだった。",
+        "COL4遺伝子の特定エクソン(エクソン27)のスキップが患者間で程度の異なる形で検出され、エクソン使用の調節異常が分子レベルで可視化された。",
+        "eGFR低下と相関する形で炎症・線維化関連遺伝子群の発現上昇と腎尿細管輸送体遺伝子の発現低下が認められ、RNAベース解析が将来の予後予測や精密医療につながる可能性が示された。"
+      ]
+    },
+    {
+      "pmid": "42626164",
+      "title": "Bovine colostrum for prevention of recurrent urinary tract infections in susceptible children: A randomized controlled trial.",
+      "journal": "World Journal of Clinical Pediatrics",
+      "date": "2026-09-09 (early view)",
+      "type": "Randomized Controlled Trial(二重盲検プラセボ対照)",
+      "doi": "10.5409/wjcp.118300",
+      "url": "https://doi.org/10.5409/wjcp.118300",
+      "one_line": "先天性腎尿路異常(CAKUT)を有し尿路感染症(UTI)を繰り返す小児60例を対象に、ウシ初乳(bovine colostrum)の経口補充がUTI再発予防に有効かを検討した二重盲検プラセボ対照RCT。全体のUTI発生率に有意差はなかったが、膀胱炎の発生率は有意に低下し(43.3% vs 70.0%)、投与4〜6ヶ月目には有意な再発抑制効果がみられた。",
+      "take_home": [
+        "CAKUTに伴う再発性UTIの小児60例を対象にしたRCTで、ウシ初乳補充群とプラセボ群の全体UTI発生率(上部・下部合算)には統計的有意差はなかった(RR 0.84, 95%CI 0.63-1.12)。",
+        "膀胱炎(下部尿路感染)に限ると、初乳群で有意に発生率が低く(43.3% vs 70.0%、RR 0.62)、投与4・5・6ヶ月目には累積的な予防効果を示唆する有意な再発減少がみられた。",
+        "抗菌薬耐性が課題となる中、初乳は重篤な有害事象なく忍容性も良好で、抗菌薬に依存しない補助的なUTI予防戦略になりうるが、まだ小規模研究であり大規模な追加検証が必要。"
+      ]
+    },
+    {
+      "pmid": "42626154",
+      "title": "Pediatric kidney transplant disparities.",
+      "journal": "World Journal of Clinical Pediatrics",
+      "date": "2026-09-09 (early view)",
+      "type": "Retrospective Database Study(全国入院データベース)",
+      "doi": "10.5409/wjcp.117940",
+      "url": "https://doi.org/10.5409/wjcp.117940",
+      "one_line": "米国の全国小児入院データベース(2022年、HCUP Kids' Inpatient Database)を用い、重症慢性腎臓病(CKDステージ4-5)と腎移植に関する入院データから、人種・保険種別による小児腎移植アクセスの格差を検討。黒人であることは腎移植を受ける確率の低下と独立して関連していた。",
+      "take_home": [
+        "2022年の全国データベースで、重症CKD入院3733件・腎移植入院636件を解析したところ、腎移植群は白人・男児・12〜18歳・メディケイド加入者が多くを占めていた。",
+        "社会経済状況や地理的要因を調整した多変量解析でも、黒人であることは腎移植を受ける確率の低下と独立して関連していた(調整オッズ比0.69, 95%CI 0.53-0.89)。",
+        "腎移植群は重症CKD単独群に比べ院内死亡数が少ない傾向(4例 vs 16例)で移植の意義を裏付ける一方、人種間格差の是正に向けた的を絞った介入の必要性が示唆された。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {"pmid": "42630052", "reason": "CAKUTに伴う再発性UTIの管理に関するレビュー。今週選出したウシ初乳RCT(CAKUT×UTI)とテーマが近接し、新規の一次データも伴わないため見送り。"},
+    {"pmid": "42626276", "reason": "小児維持透析における透析モダリティとsICAM-1濃度の関連を検討した単施設研究(n=26)。規模が小さく代理マーカー研究のため優先度を下げた。"},
+    {"pmid": "42626937", "reason": "Clcnkb欠損マウスにおけるバーター症候群のマグネシウム輸送体発現に関する基礎研究。動物モデルの基礎研究のため見送り。"},
+    {"pmid": "42621140", "reason": "ヌーナン症候群児に対するシムバスタチンの第3相RCT。腎臓病そのものがテーマではないため見送り。"},
+    {"pmid": "42629679", "reason": "10ヶ月児の横紋筋融解症の症例報告。単一症例報告のため優先度を下げた。"},
+    {"pmid": "42632785", "reason": "若年発症全身性エリテマトーデスにおけるTLR7変異の機能解析。ループス腎炎に関わりうるが本論文の主眼は免疫学的機序でありSLE自体がテーマのため見送り。"},
+    {"pmid": "42631820", "reason": "腎機能障害患者における新規ガドリニウム造影剤の薬物動態(第1相試験)。成人主体の薬物動態試験で小児腎臓病領域からやや外れるため見送り。"}
+  ]
+}
