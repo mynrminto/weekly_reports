@@ -1,0 +1,89 @@
+{
+  "issue_date": "2026-08-31",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)",
+    "datetype": "edat",
+    "date_from": "2026-08-24",
+    "date_to": "2026-08-31",
+    "new_hits_broad": 158
+  },
+  "selected": [
+    {
+      "pmid": "42655963",
+      "title": "Peripheral B-cell receptor immunoglobulin heavy chain repertoire as a potential biomarker for frequently relapsing nephrotic syndrome in children.",
+      "journal": "Renal Failure",
+      "date": "2026-08-26",
+      "type": "Cohort Study(バイオマーカー探索)",
+      "doi": "10.1080/0886022X.2026.2698338",
+      "url": "https://doi.org/10.1080/0886022X.2026.2698338",
+      "one_line": "新規発症の小児特発性ネフローゼ症候群35例(頻回再発型20例・非頻回再発型15例)と健常対照15例で末梢血B細胞受容体(BCR)重鎖(IGH)レパトアを次世代シーケンシングで解析し、頻回再発を予測しうる分子バイオマーカーの可能性を検討した前向きコホート研究。",
+      "take_home": [
+        "ステロイド治療前の時点で、頻回再発群(FRNS)は非頻回再発群(NFRNS)と比べてIGH遺伝子使用の偏り、CDR-H3の短縮、体細胞超変異(SHM)の増加、BCRレパトア多様性(Shannon指数)の低下が有意に認められた。",
+        "これらの異常はNFRNS群では治療後にほぼ正常化した一方、FRNS群では治療後も残存・悪化する傾向にあり、B細胞クローン動態の違いが臨床経過を反映しうることを示唆した。",
+        "治療前のShannon指数の低さ・CDR-H3短縮・SHM高値は、その後の寛解不良と有意に関連しており、初発時点での早期リスク層別化・個別化治療選択への応用が期待されるが、n=35の単施設研究であり前向き多施設での検証が必要。"
+      ]
+    },
+    {
+      "pmid": "42641288",
+      "title": "Review: Posterior urethral valves (PUV) … what do we know?",
+      "journal": "Journal of Pediatric Urology",
+      "date": "2026-08-11",
+      "type": "Scoping Review(PRISMA-ScR)",
+      "doi": "10.1016/j.jpurol.2026.106205",
+      "url": "https://doi.org/10.1016/j.jpurol.2026.106205",
+      "one_line": "男児の先天性下部尿路閉塞の主因であり小児CKD/末期腎不全の主要原因である後部尿道弁(PUV)について、出生前カウンセリングから長期フォローアップまでの管理全体をPRISMA-ScRに準拠してマッピングしたスコーピングレビュー(1243文献をスクリーニングし156件を採用)。",
+      "take_home": [
+        "内視鏡的一次弁切除術が治療の中心であり、生後1年以内(早ければ生後6週時点)のnadirクレアチニンやPURKスコアによるリスク層別化には強いエビデンス(LOE 1a-2a)があることが整理された。",
+        "発熱性UTI予防のための包皮環状切除術、特定の膀胱機能タイプに対する抗コリン薬・α遮断薬、単施設RCTで支持されるようになった夜間膀胱排出(valve-bladder syndrome対応)など、実践的な管理オプションが体系化された。",
+        "一方でエビデンスの大半は観察研究にとどまり、出生前介入・バイオマーカー検証・サーベイランスプロトコル・成人期への移行医療・長期の性/生殖機能アウトカムには大きな研究ギャップが残る。前向き多施設レジストリや段階的導入(stepped-wedge)試験が今後の優先課題とされた。"
+      ]
+    },
+    {
+      "pmid": "42667348",
+      "title": "Salivary hormones and adipokines are associated with glycemic control and early renal and cardiometabolic markers in children and young adults with type 1 diabetes.",
+      "journal": "Journal of Endocrinological Investigation",
+      "date": "2026-08-29",
+      "type": "Cross-sectional Cohort Study",
+      "doi": "10.1007/s40618-026-03038-4",
+      "url": "https://doi.org/10.1007/s40618-026-03038-4",
+      "one_line": "1型糖尿病(T1D)の小児・若年成人349例を対象に、唾液中の代謝ホルモン・アディポカイン濃度と血糖コントロール・早期腎機能/心血管代謝マーカーとの関連を検討した横断研究。過体重/肥満群では血糖コントロール不良に加えeGFR低下がみられ、一部の唾液中ホルモンは体重とは独立して腎機能・血圧・脂質プロファイルと関連していた。",
+      "take_home": [
+        "過体重/肥満のT1D患児・若年成人は、正常体重群と比べてHbA1c高値、eGFR低下、血圧上昇、HDL-C低下、中性脂肪上昇など、より不良な代謝・血管アウトカムを呈していた。",
+        "唾液中ホルモン濃度自体は体重区分による差はなかったが、グレリン・GLP-1はHbA1cと負の相関、PAI-1は正の相関を示し、レプチン・ビスファチンなどは腎機能や血圧と関連していた(いずれも体重とは独立の関連)。",
+        "侵襲性の低い唾液検体からのバイオマーカー測定が、T1D患児における早期腎症・血管合併症スクリーニングの補助ツールになりうる可能性が示唆されたが、横断研究であり因果関係の検証には前向きデータが必要。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42668630",
+      "title": "Single-cell transcriptomic signatures of T cells associated with rituximab responsiveness in idiopathic nephrotic syndrome.",
+      "reason": "テーマがPMID 42655963(小児ネフローゼ症候群のバイオマーカー)と重複するため見送り。responder/non-responder各3例の探索的研究で症例数も小さい。"
+    },
+    {
+      "pmid": "42646582",
+      "title": "Beyond the Steroid Trial: A Scoping Review of Biomarkers for Pediatric Nephrotic Syndrome.",
+      "reason": "抗ネフリン抗体などのレビューで有用だが、今週はネフローゼ症候群バイオマーカーの主題をPMID 42655963に集約するため非選定。"
+    },
+    {
+      "pmid": "42664148",
+      "title": "Multisystem Burden of Paediatric Systemic Lupus Erythematosus: A Systematic Review and Meta-Analysis of Neuropsychiatric, Renal, Ocular, and Immunological Outcomes.",
+      "reason": "小児SLE全身臓器障害の包括的レビューで腎症はその一部にとどまり、腎臓病領域への特異性がやや薄いため優先度を下げた。"
+    },
+    {
+      "pmid": "42668285",
+      "title": "Cognitive disengagement and emotional-behavioral profiles in children with voiding dysfunction: a controlled clinical study.",
+      "reason": "排尿機能障害と情緒・行動面の関連を検討した良質な対照研究だが、腎臓病そのものというより心理社会的側面が主眼のため次点。"
+    },
+    {
+      "pmid": "42650459",
+      "title": "Pediatric Kidney Transplantation: A Systematic Review.",
+      "reason": "総論的な移植レビューで新規性がやや限定的なため、今回はより具体的な臨床応用が見える3本を優先。"
+    }
+  ]
+}
