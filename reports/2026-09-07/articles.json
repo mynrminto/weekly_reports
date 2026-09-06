@@ -1,0 +1,90 @@
+{
+  "issue_date": "2026-09-07",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)",
+    "datetype": "edat",
+    "date_from": "2026-08-31",
+    "date_to": "2026-09-07",
+    "new_hits_broad": 171,
+    "new_hits_quality_filtered": 20
+  },
+  "selected": [
+    {
+      "pmid": "42691062",
+      "title": "Efficacy and safety of 5-day versus 7-day antibiotic therapy for spontaneous bacterial peritonitis in children with idiopathic nephrotic syndrome: an open-label randomized controlled trial.",
+      "journal": "Journal of Tropical Pediatrics",
+      "date": "2026-08-20",
+      "type": "非劣性RCT（オープンラベル）",
+      "doi": "10.1093/tropej/fmag060",
+      "url": "https://doi.org/10.1093/tropej/fmag060",
+      "one_line": "特発性ネフローゼ症候群(INS)に合併した特発性細菌性腹膜炎(SBP)の小児50例を対象に、静注セフトリアキソン5日間投与が7日間投与に対して臨床的反応で非劣性かを検証した単施設オープンラベル非劣性RCT。",
+      "take_home": [
+        "複合臨床反応(解熱・腹痛・圧痛の消失)は5日群25/25(100%)、7日群22/25(88%)で、リスク差の95%CI下限が事前設定の非劣性マージン(-15%)を上回り、5日間投与は7日間投与に対して非劣性と判定された。",
+        "細菌学的治癒率は両群とも96%と同等であった一方、細胞学的反応(腹水細胞数の改善)は64%対72%で非劣性を証明できず、入院期間や追加抗菌薬の必要性にも有意差はなかった。",
+        "単施設・50例というサンプルサイズの小さいオープンラベル試験であり、細胞学的反応の評価が不十分な点も踏まえ、SBPの抗菌薬投与期間を日常的に5日へ短縮する前には、より大規模な多施設試験での再現性確認が望ましい。"
+      ]
+    },
+    {
+      "pmid": "42697975",
+      "title": "Cystinosis-associated metabolic bone disease: pathogenesis and outcome.",
+      "journal": "Pediatric Nephrology",
+      "date": "2026-09-04",
+      "type": "総説(Review)",
+      "doi": "10.1007/s00467-026-07518-w",
+      "url": "https://doi.org/10.1007/s00467-026-07518-w",
+      "one_line": "CTNS遺伝子異常によるライソゾーム蓄積症である乳児型腎症性シスチン症で生じる代謝性骨疾患(CMBD)について、腎ファンコニ症候群・CKDに伴う続発性要因に加え、骨芽細胞・破骨細胞の内因性異常や炎症機序を含む病態生理と長期アウトカムを整理した総説。",
+      "take_home": [
+        "CMBDは生後6〜12か月頃に始まる腎ファンコニ症候群を背景に、生後2年以内から不均衡な低身長・くる病・骨痛として発症し、その後の筋力低下や成人期の側弯・骨折へとつながりうる。",
+        "従来のCKD-MBD/ファンコニ症候群に伴う続発性変化に加え、骨・筋肉のマクロファージへのシスチン結晶蓄積が炎症を介して破骨細胞活性を高めるなど、骨芽細胞・破骨細胞自体の内因性異常が病態に関与する可能性が近年示されている。",
+        "システアミンによる早期治療・リン/活性型ビタミンD補充・代謝性アシドーシス補正・成長ホルモン療法などを行っても進行性の骨量減少を防ぎきれない例があり、家族歴に基づくスクリーニングでの早期診断と、将来的な抗炎症・破骨細胞標的療法の開発が課題として残る。"
+      ]
+    },
+    {
+      "pmid": "42700261",
+      "title": "Ultrasound pattern of upper urinary tract remodeling after pyeloplasty: a prospective multicentric study.",
+      "journal": "Pediatric Surgery International",
+      "date": "2026-09-05",
+      "type": "前向き多施設研究",
+      "doi": "10.1007/s00383-026-06557-6",
+      "url": "https://doi.org/10.1007/s00383-026-06557-6",
+      "one_line": "腎盂尿管移行部通過障害(UPJO)に対する腎盂形成術後の小児31例を対象に、ダブルJステント抜去後2・6・9か月、1・2年時点で標準化された超音波評価を行い、腎盂前後径(APD)や皮質厚の術後リモデリングパターンを前向きに追跡した多施設研究。",
+      "take_home": [
+        "腎盂形成術が成功しても腎盂前後径(APD)の縮小は緩徐で、術前中央値24mmに対し2か月時点で30%縮小、6か月で60%縮小と、術後6か月までに大部分の改善が起こり、それ以降の変化は乏しい。",
+        "患側の皮質厚も術前4.9mmから2年後8mmへと段階的に改善する(63%増加)が、多くの症例で健側と同等の正常値までは戻らない。",
+        "この多施設での時系列基準値は、術後早期にAPDが十分縮小していなくても異常とは限らないことを示しており、真の再閉塞との鑑別や、不要な再介入を避けるための経過観察の目安として活用できる可能性がある。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42684402",
+      "title": "Training programs for families of children on home peritoneal dialysis: a scoping review.",
+      "reason": "在宅腹膜透析患児家族への教育プログラムに関する有用なスコーピングレビューだが、臨床アウトカムへの直接的インパクトよりプログラム設計・教育面が主眼のため、より臨床的含意の明確な3本を優先。"
+    },
+    {
+      "pmid": "42677770",
+      "title": "Assessment of NGAL, eGFR, and tubular injury markers for early detection of chemotherapy-induced nephrotoxicity in pediatric oncology patients.",
+      "reason": "小児腫瘍患者における化学療法関連腎毒性の早期発見バイオマーカーレビューで関心は高いが、掲載誌のインパクトが小さくレビューの独自性がやや限定的なため次点。"
+    },
+    {
+      "pmid": "42688370",
+      "title": "Efficacy of Probiotic Supplementation for Preventing Pediatric Urinary Tract Infections: A GRADE-Based Dose-Response Meta-Analysis.",
+      "reason": "小児UTI予防のプロバイオティクスに関するメタ解析だが、小児腎臓病というより一般小児科・感染症領域の色合いが強く、腎臓病特異性を優先し見送り。"
+    },
+    {
+      "pmid": "42700010",
+      "title": "Association between vitamin D deficiency and chronic kidney disease progression: A GRADE-based dose-response systematic review and meta-analysis.",
+      "reason": "ビタミンD欠乏とCKD進行の関連を扱うメタ解析だが、対象集団が主に成人CKDであり小児特異的なデータが限定的なため見送り。"
+    },
+    {
+      "pmid": "42685129",
+      "title": "A multicenter prospective validation cohort does not support the use of kidney/psoas [18F]FDG uptake in the diagnosis of kidney allograft subclinical rejection.",
+      "reason": "腎移植片の亜臨床拒絶反応診断における18F-FDG PET/CTの有用性を否定したネガティブスタディで学術的に興味深いが、小児に特化していない点と対象がやや専門的すぎるため見送り。"
+    }
+  ]
+}
