@@ -1,0 +1,90 @@
+{
+  "issue_date": "2026-09-14",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)",
+    "datetype": "edat",
+    "date_from": "2026-09-07",
+    "date_to": "2026-09-14",
+    "new_hits_broad": 159,
+    "new_hits_quality_filtered": 22
+  },
+  "selected": [
+    {
+      "pmid": "42730770",
+      "title": "Rare forms of autosomal dominant tubulointerstitial kidney disease in children: a retrospective case series from Oman.",
+      "journal": "Pediatric Nephrology",
+      "date": "2026-09-12",
+      "type": "後方視的症例集積研究",
+      "doi": "10.1007/s00467-026-07519-9",
+      "url": "https://doi.org/10.1007/s00467-026-07519-9",
+      "one_line": "オマーンの2つの三次医療小児腎臓病センターで2010〜2024年に遺伝学的に確定診断されたREN・SEC61A1・HNF1B関連の稀な常染色体優性尿細管間質性腎疾患(ADTKD)5例(3家系)を後方視的に検討し、表現型スペクトラムを拡張した症例集積研究。",
+      "take_home": [
+        "3人同胞のREN変異(c.49T>C; p.Trp17Arg)例では早期発症の貧血・高カリウム血症・代謝性アシドーシス・高尿酸血症に加え、2例で報告の少なかった低マグネシウム血症を認めた。",
+        "SEC61A1変異(c.554C>G; p.Thr185Ser)を有する16歳女児例では、てんかん・小頭症・低マグネシウム血症・CKDを認め、てんかんはADTKD-SEC61A1関連疾患としてこれまで報告のない所見だった。",
+        "HNF1B変異(c.541C>T; p.Arg181*)の13歳男児例は腎嚢胞・低マグネシウム血症・蛋白尿・若年発症成人型糖尿病(MODY)を呈しており、低マグネシウム血症や腎外症状を伴う小児では遺伝子検査による早期診断が正確な管理・遺伝カウンセリングにつながる可能性がある。"
+      ]
+    },
+    {
+      "pmid": "42730615",
+      "title": "Acute kidney injury during ruxolitinib therapy in pediatric patients with graft-versus-host disease: incidence, associated factors, and histopathological findings in a retrospective cohort study.",
+      "journal": "Pediatric Hematology and Oncology",
+      "date": "2026-09-12",
+      "type": "後方視的コホート研究",
+      "doi": "10.1080/08880018.2026.2731106",
+      "url": "https://doi.org/10.1080/08880018.2026.2731106",
+      "one_line": "同種造血幹細胞移植後のステロイド抵抗性GVHDに対しルキソリチニブ治療を受けた小児38例(2018〜2025年)を対象に、腎機能の経時変化・急性腎障害(AKI)の頻度と関連因子・組織所見を後方視的に検討したコホート研究。",
+      "take_home": [
+        "血清クレアチニンはベースライン0.34±0.16 mg/dLから投与3か月後0.50±0.34 mg/dLへ有意に上昇し(p<0.001)、6か月時点でも0.48±0.23 mg/dLとやや高値のまま推移した。",
+        "AKIはルキソリチニブ開始から中央値2.36か月後に7例(18.4%)で発生し、うち4例(57.1%)は急性腎臓病へ進行したが、腎生検ではBKウイルス腎症は否定された。",
+        "AKIはBKウイルス再活性化・BKウイルス関連出血性膀胱炎・CMV再活性化・移植時年齢の高さ・ベースラインクレアチニンの高さと有意に関連した一方、ルキソリチニブの投与量とは関連せず、腎障害は多因子性である可能性が示唆されたため、非曝露対照群を含む対照研究での薬剤自体の寄与の検証が今後必要である。"
+      ]
+    },
+    {
+      "pmid": "42706624",
+      "title": "Evolution of Therapeutic Plasma Exchange Use and Outcomes in Children Across American Society for Apheresis Categories: A Single-Center Cohort Study.",
+      "journal": "Journal of Clinical Apheresis",
+      "date": "2026-09-08",
+      "type": "単施設コホート研究",
+      "doi": "10.1002/jca.70175",
+      "url": "https://doi.org/10.1002/jca.70175",
+      "one_line": "米国アフェレシス学会(ASFA)カテゴリー別に、小児における治療的血漿交換(TPE)の利用状況・安全性・治療反応・死亡率の変遷を、単施設で2011〜2024年に実施された416コースを対象に後方視的に検討したコホート研究。",
+      "take_home": [
+        "TPEの利用件数は経時的に有意に増加し(Spearman ρ=0.88, p<0.001)、研究期間を通じてASFAカテゴリーII・IIIの適応が全体の約80%を占めた。",
+        "手技関連合併症は3640手技中76件(2%)で、カテゴリーIII適応はカテゴリーI・IIより合併症頻度が高かった(3% 対 1%・2%, p<0.001)一方、治療目標達成率はカテゴリー間で有意差がなかった(75.4〜84.8%, p=0.11)。",
+        "全体の28日死亡率は13%(カテゴリーI 4%・II 6%・III 24%)と適応により大きく異なったが、カテゴリーIII適応に限ると2018〜2024年の治療は2011〜2017年と比べ調整後28日死亡オッズが有意に低く(調整OR 0.33, 95%CI 0.13-0.83, p=0.02)、経時的な管理改善の可能性が示唆された。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42725562",
+      "title": "Comparison of the Efficacy of Robot-Assisted and Laparoscopic Anderson-Hynes Pyeloplasty in Pediatric Patients with Ureteropelvic Junction Obstruction.",
+      "reason": "ロボット支援下腎盂形成術と腹腔鏡下腎盂形成術の比較は有用な知見だが、先週(2026-09-07号)も腎盂形成術後の画像評価を取り上げたため、テーマの重複を避けて見送り。"
+    },
+    {
+      "pmid": "42717002",
+      "title": "Adequacy of dialysis in children and adolescents: more than just Kt/V.",
+      "reason": "小児透析の質を再考する重要な総説だが、新規の原著データを持たないため、今週は原著データのある3本を優先。"
+    },
+    {
+      "pmid": "42720730",
+      "title": "Neonatal acute kidney injury and the patent ductus arteriosus.",
+      "reason": "新生児AKIとPDAの関連を扱う重要な総説だが、同様に原著データを持たないため見送り。"
+    },
+    {
+      "pmid": "42704298",
+      "title": "Contemporary management of pediatric renal trauma.",
+      "reason": "小児腎外傷管理の総説で臨床的に有用だが、原著データを持つ3本を優先し次点とした。"
+    },
+    {
+      "pmid": "42726335",
+      "title": "Unraveling the Clinical Spectrum of DNASE1L3 Deficiency: Insights from Case Series and Systematic Literature Review.",
+      "reason": "DNASE1L3欠損症はループス腎炎関連の腎病変を伴いうるが、主眼はリウマチ・膠原病領域であり腎臓病との関連度がやや薄いため見送り。"
+    }
+  ]
+}
