@@ -1,0 +1,90 @@
+{
+  "issue_date": "2026-09-21",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)",
+    "datetype": "edat",
+    "date_from": "2026-09-14",
+    "date_to": "2026-09-21",
+    "new_hits_broad": 153,
+    "new_hits_quality_filtered": 21
+  },
+  "selected": [
+    {
+      "pmid": "42760017",
+      "title": "Frailty in children with chronic kidney disease and kidney failure.",
+      "journal": "Kidney International",
+      "date": "2026-10 (Vol.110, Issue 4, p.781-783)",
+      "type": "コメンタリー(視点論文)",
+      "doi": "10.1016/j.kint.2026.07.005",
+      "url": "https://doi.org/10.1016/j.kint.2026.07.005",
+      "one_line": "小児の慢性腎臓病(CKD)・腎不全におけるフレイルは、成人の「機能低下」とは異なり「発達可能性の喪失」として現れるため、年齢相応の標準化スクリーニングによる早期同定と多職種介入が重要であり、小児期のフレイルは可逆的となりうると論じるKidney International誌のコメンタリー。同誌同号には患児の母によるフレイル体験のケアギバー視点エッセイ(PMID 42760016)も併載されている。",
+      "take_home": [
+        "小児のフレイルは成人の身体機能低下ではなく「成長・発達の潜在能力の喪失」として現れるため、成人向けフレイル指標をそのまま流用すべきではない。",
+        "発達段階に応じた標準化スクリーニングを通常診療に組み込み、早期同定から多職種介入(栄養・リハビリ・心理社会的支援等)へつなげることが提案されている。",
+        "成人と異なり小児期のフレイルは可逆的となりうるため、早期介入によって成長・レジリエンスを取り戻し、「ほぼ正常な子ども時代」を実現できる可能性がある。"
+      ]
+    },
+    {
+      "pmid": "42762409",
+      "title": "A new frontier in edema management: the potential of tolvaptan for refractory edema with hyponatremia in pediatric nephrotic syndrome.",
+      "journal": "Clinical and Experimental Nephrology",
+      "date": "2026-09-19",
+      "type": "前向き研究",
+      "doi": "10.1007/s10157-026-02939-1",
+      "url": "https://doi.org/10.1007/s10157-026-02939-1",
+      "one_line": "フロセミド抵抗性の高度浮腫と低ナトリウム血症を伴う1〜12歳の小児ネフローゼ症候群60例に対し、循環血漿量減少・肝機能異常・腎機能低下(eGFR<60)を除外した上でバソプレシンV2受容体拮抗薬トルバプタン(0.3〜1 mg/kg/日)を48時間投与したところ、体重減少・尿量増加・血清Na上昇が有意に得られ、重大な有害事象は認めなかったとするインドからの前向き研究。",
+      "take_home": [
+        "フロセミド抵抗性(48時間投与後の体重減少<3%)かつ低Na血症(<130 mEq/L)を呈する小児ネフローゼ浮腫に対し、循環血漿量減少・肝酵素上昇・eGFR<60を除外した上でトルバプタン0.3〜1 mg/kg/日・48時間投与が選択肢となりうる。",
+        "60例の検討で、体重(21.98→21.02 kg)、24時間尿量(700→1200 mL/日)、血清Na(125.87→131.18 mEq/L)がいずれも投与48時間後に有意に改善した(各p<0.001〜0.0001)。",
+        "肝酵素の有意な変化はなく短期的な安全性シグナルは良好だが、単一施設・60例の検討であり、長期安全性や至適用量・中止基準の確立には今後の検証が必要。"
+      ]
+    },
+    {
+      "pmid": "42762301",
+      "title": "Predictors of clinically significant hemorrhage following ultrasound-guided percutaneous renal biopsy in pediatric patients.",
+      "journal": "Pediatric Radiology",
+      "date": "2026-09-19",
+      "type": "後方視的コホート研究",
+      "doi": "10.1007/s00247-026-06794-w",
+      "url": "https://doi.org/10.1007/s00247-026-06794-w",
+      "one_line": "2010〜2024年に超音波ガイド下経皮的腎生検を受けた小児207例(自己腎82%・移植腎18%、年齢中央値11歳)を対象に、臨床的に問題となる出血(生検後4〜6時間でのHb低下≥15 g/Lおよび/または生検直後の超音波で腎周囲血腫≥5 mL)の予測因子を検討した、カナダ・CHEOからの後方視的研究。",
+      "take_home": [
+        "生検直後の超音波で腎周囲血腫(≥5 mL)を認めた場合、有意なHb低下(≥15 g/L)のリスクが約4.6倍高い(OR 4.6, 95%CI 1.5-13.4, p=0.004)。",
+        "検討された年齢・自己腎/移植腎の別を含む他の12の臨床因子は、多重比較補正後いずれも有意な予測因子とはならなかった。",
+        "生検直後の超音波評価をルーチン化することで、モニタリング強化や早期介入が必要な患者の選別に役立つ可能性があるが、前向き検証が望ましい。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42751027",
+      "title": "Growth and development following paediatric kidney transplantation: Mechanisms, influencing factors, and clinical management.",
+      "reason": "移植後の成長・発達に関する良質な総説だが、新規データを伴わず、今週はKidney International誌のフレイルに関する視点論文とテーマが近接するため、より新規性の高いフレイルの論文を優先。"
+    },
+    {
+      "pmid": "42739798",
+      "title": "Renal Amyloidosis in Pediatric Autoinflammatory Syndromes: Subclinical Onset, Early Biomarkers, and Clues for Timely Characterization and Interventions.",
+      "reason": "小児自己炎症症候群における腎アミロイドーシスの重要な総説だが、原著データのある他の3本を優先し次点とした。"
+    },
+    {
+      "pmid": "42748479",
+      "title": "Predictors of chronic kidney disease in children who underwent surgical correction of congenital heart disease: a long-term follow-up cohort study.",
+      "reason": "先天性心疾患術後のCKD予測因子を検討した単施設コホート研究で有用だが、テーマの幅(フレイル概念・薬物療法・手技合併症)のバランスを優先し見送り。"
+    },
+    {
+      "pmid": "42760401",
+      "title": "Risk factors for acute kidney injury after pediatric liver transplantation: a systematic review and meta-analysis.",
+      "reason": "質の高いシステマティックレビュー・メタ解析だが、移植周術期AKIは過去の号でも近いテーマを扱っており、重複を避けて見送り。"
+    },
+    {
+      "pmid": "42743423",
+      "title": "SBUF-SMUF: On the path to the optimum hemofiltration technique in pediatric cardiopulmonary bypass: A randomized clinical trial.",
+      "reason": "ランダム化比較試験だが主眼は心臓手術中の血液浄化法比較であり、腎臓病領域そのものとの関連度がやや薄いため見送り。"
+    }
+  ]
+}
