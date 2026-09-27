@@ -1,0 +1,85 @@
+{
+  "issue_date": "2026-09-28",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)",
+    "datetype": "edat",
+    "date_from": "2026-09-21",
+    "date_to": "2026-09-28",
+    "new_hits_broad": 213,
+    "new_hits_quality_filtered": 43
+  },
+  "selected": [
+    {
+      "pmid": "42801339",
+      "title": "Combination therapy with furosemide and metolazone as compared to furosemide alone for treatment of edema in children with nephrotic syndrome: a randomized controlled trial.",
+      "journal": "European Journal of Pediatrics",
+      "date": "2026-09-27 (Vol.185, Issue 10)",
+      "type": "無作為化比較試験(RCT)",
+      "doi": "10.1007/s00431-026-07445-w",
+      "url": "https://doi.org/10.1007/s00431-026-07445-w",
+      "one_line": "1〜14歳の中等度〜重度浮腫を伴うネフローゼ症候群患児50例(各群25例)を対象に、フロセミド単独とフロセミド+メトラゾン併用を比較したインドAIIMS Bhubaneswarからの無作為化比較試験。48時間累積尿量に有意差はなく(補正後解析)、併用群の16%で有意な体重減少のため治療中止を要したことから、著者らは非選択的な小児ネフローゼ症候群患者への upfront 併用利尿薬療法は推奨しないとした。",
+      "take_home": [
+        "中等度〜重度浮腫のネフローゼ症候群患児50例のRCTで、フロセミド単独群とフロセミド+メトラゾン併用群の48時間累積尿量に有意差はなかった。補正前は併用群でベースラインからの尿量増加が有意に大きかったが、ベースライン尿量で調整(ANCOVA)すると有意差は消失した。",
+        "併用群の16%で有意な体重減少により治療中止を要し、電解質異常(dyselectrolytemia)や入院期間には両群間で有意差はなかった。",
+        "今回の中立的な主要評価項目の結果は、非選択的な小児ネフローゼ症候群患者へのupfront併用利尿薬療法を支持しないが、特定のサブグループでの有効性を検証する仮説生成的研究として位置づけるべきである。"
+      ]
+    },
+    {
+      "pmid": "42787374",
+      "title": "Complement diagnostics and therapeutics for the pediatric population: early successes and opportunities for further advancement.",
+      "journal": "Frontiers in Pharmacology",
+      "date": "2026-09-10",
+      "type": "総説(レビュー)",
+      "doi": "10.3389/fphar.2026.1891349",
+      "url": "https://doi.org/10.3389/fphar.2026.1891349",
+      "one_line": "小児腎臓病・血液・リウマチ領域における補体関連疾患(非典型溶血性尿毒症症候群[aHUS]、移植関連血栓性微小血管症、発作性夜間ヘモグロビン尿症、C3腎症、IgA腎症、ANCA関連血管炎)の病態生理・診断・補体阻害薬による治療を包括的にまとめた、米国コロラド大学の小児腎臓科医らによる総説(Frontiers in Pharmacology)。診断の遅れ・検証されたバイオマーカーの不在・小児臨床試験基盤の不足などの課題も論じている。",
+      "take_home": [
+        "補体関連疾患(aHUSや移植関連血栓性微小血管症など)は個々にはまれだが、補体阻害薬の登場により小児腎臓病・血液・リウマチ領域で最も治療可能な疾患群の一つとなっており、診断の遅れが不可逆的な腎障害に直結するため早期認識が極めて重要である。",
+        "承認されている補体阻害薬は、終末補体経路を阻害するか近位(上流)経路を阻害するかという作用部位によって臨床的意味合いが異なり、補体検査(モニタリング)の実地臨床での限界を理解した上で使い分ける必要がある。",
+        "診断の遅れ、検証されたバイオマーカーの不在、小児対象の臨床試験基盤の乏しさ、標的治療のない疾患の存在といった課題が残っており、新規薬剤の開発と小児への公平なアクセスの確保が今後の優先課題である。"
+      ]
+    },
+    {
+      "pmid": "42794222",
+      "title": "Serum Cystatin C as an Early Predictive Biomarker for Acute Kidney Injury (AKI) in Neonates: A PRISMA-DTA Systematic Review.",
+      "journal": "Children (Basel)",
+      "date": "2026-09-05 (Vol.13, Issue 9)",
+      "type": "システマティックレビュー(診断精度)",
+      "doi": "10.3390/children13091202",
+      "url": "https://doi.org/10.3390/children13091202",
+      "one_line": "重症新生児の12〜40%に発症し死亡リスクを高める新生児急性腎障害(AKI)について、早期診断バイオマーカーとしての血清シスタチンC(sCysC)の診断精度を検討したPRISMA-DTA準拠・PROSPERO登録のシステマティックレビュー(ルーマニア・シビウ大学など)。13研究を統合し、早期予測研究ではAUC 0.670〜1.000、同時診断研究では感度84.8〜88.5%・特異度61.8〜75.0%(AUC 0.844〜0.849)と報告している。",
+      "take_home": [
+        "新生児AKIは重症新生児の12〜40%に発症し死亡リスクを高めるが、現行の診断基準である血清クレアチニンは腎障害がかなり進行してから上昇するため、より早期に検出できるバイオマーカーが求められている。",
+        "血清シスタチンC(sCysC)はクレアチニン上昇に先行して上昇することが早期予測研究群で示され(AUC 0.670〜1.000)、同時診断研究群でも感度84.8〜88.5%・特異度61.8〜75.0%(AUC 0.844〜0.849)と良好な診断性能が報告された。",
+        "報告されたカットオフ値は0.60〜2.87 mg/L(敗血症関連AKIの1研究では9.4 mg/L)と研究間でばらつきが大きく、日常臨床での使用には標準化されたアッセイと集団特異的な閾値の前向き検証が今後必要である。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42791366",
+      "title": "Recommendations for the management of frailty in chronic kidney disease: a consensus report.",
+      "reason": "CKDにおけるフレイル管理に関するNature Reviews Nephrology誌のコンセンサス報告で重要だが、主として成人領域を対象とするコンセンサスであり、先週号(2026-09-21)で小児CKDのフレイルを深掘りしたばかりのため、テーマの重複を避けて見送り。"
+    },
+    {
+      "pmid": "42772450",
+      "title": "Congenital Anomalies of the kidney and urinary tract: pediatric origins and adult outcomes.",
+      "reason": "先天性腎尿路異常(CAKUT)の小児期起源と成人期転帰を論じるKidney International誌の質の高い総説だが、今週は原著RCT・治療総説・診断バイオマーカーのバランスを優先し、総説形式が他の候補と重複するため見送り。"
+    },
+    {
+      "pmid": "42788543",
+      "title": "Standard versus miniaturized percutaneous nephrolithotomy in pediatric patients: a systematic review and meta-analysis.",
+      "reason": "小児における標準式 vs. 縮小式経皮的腎砕石術(PCNL)を比較したシステマティックレビュー・メタ解析で有用だが、泌尿器科的手技寄りのテーマであり、今週は内科的トピック(利尿薬・補体・バイオマーカー)を優先し見送り。"
+    },
+    {
+      "pmid": "42796319",
+      "title": "Venous Thromboembolism in Neonates, Children, and Adolescents: A Comprehensive Narrative Review of Risk Factors, Diagnosis, Treatment, and Prevention.",
+      "reason": "新生児〜青年期の静脈血栓塞栓症に関する包括的総説で腎静脈血栓症にも触れているが、主眼は血液凝固領域全般であり、腎臓病そのものとの関連度がやや薄いため見送り。"
+    }
+  ]
+}
