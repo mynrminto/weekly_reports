@@ -1,0 +1,10 @@
+{"date":"2026-10-12","search":{"query":"(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)","datetype":"edat","from":"2026/10/05","to":"2026/10/12","total_count":151},
+"articles":[
+{"pmid":"42857576","title":"Time-stratified prognostic factors for poor renal outcomes in childhood-onset lupus nephritis: a systematic review and meta-analysis.","journal":"Front Immunol","date":"2026-09-25","doi":"10.3389/fimmu.2026.1939149","url":"https://pubmed.ncbi.nlm.nih.gov/42857576/","type":"系統的レビュー/メタ解析","one_line":"小児ループス腎炎の腎予後因子を追跡期間別に統合(47研究)","take_home":["年齢・eGFR低下・高血圧・再燃・男児・早期腎寛解不成立が不良腎予後と関連","ネフローゼ域蛋白尿とクレアチニン高値は高バイアス研究を除くと頑健性が低下","累積の不良転帰は追跡が長いほど増え、動的な長期リスク評価が重要"]},
+{"pmid":"42856850","title":"Clinical manifestations and proportions of severe outcomes in pediatric acute post-streptococcal glomerulonephritis: a systematic review and meta-analysis of predominantly hospital-based cohorts.","journal":"Front Med (Lausanne)","date":"2026-09-25","doi":"10.3389/fmed.2026.1953518","url":"https://pubmed.ncbi.nlm.nih.gov/42856850/","type":"系統的レビュー/メタ解析","one_line":"小児APSGN 18研究2,191人の臨床像と重症転帰の統合割合","take_home":["病院ベースのコホートで高血圧約65%・肉眼的血尿約47.5%","AKI約40%・RRT約4%だが異質性が極めて大きく一般集団の頻度ではない","急性期は血圧・体液量・腎機能の継続モニタリングが重要"]},
+{"pmid":"42840564","title":"Thromboembolic prophylaxis in childhood idiopathic nephrotic syndrome. From pathophysiology to clinical management.","journal":"Front Pediatr","date":"2026-09-22","doi":"10.3389/fped.2026.1933209","url":"https://pubmed.ncbi.nlm.nih.gov/42840564/","type":"ナラティブレビュー","one_line":"小児INSの血栓予防を病態からリスク層別化まで整理","take_home":["血栓傾向はAT喪失だけでなく凝固亢進・線溶低下・血小板/内皮障害など多因子","アルブミン約20g/L未満は予防検討の実践的目安として提案(未検証)","軽い再発に一律予防は不要、LMWHが適切とする提案で前向き研究が必要"]}],
+"not_selected_this_week":[
+{"pmid":"42858278","reason":"成人含む孤立腎のレビューで小児特化度が低め(次点)"},
+{"pmid":"42831016","reason":"SRNSバイオマーカーSR。小規模・仮説生成的でネフローゼは血栓予防と主題重複を避け見送り"},
+{"pmid":"42838512","reason":"AI腎病理のメタ解析で小児関連が薄い"},
+{"pmid":"42859380","reason":"症例シリーズ(症例報告系)"}]}
